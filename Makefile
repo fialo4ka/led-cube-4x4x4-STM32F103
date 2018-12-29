@@ -1,8 +1,8 @@
 # path to STM32F103 standard peripheral library
-STD_PERIPH_LIBS ?= ./STM32F10x_StdPeriph_Lib_V3.5.0/
+STD_PERIPH_LIBS ?= /home/tuxcoder/programs/stm32f10x-stdperiph-lib
 
 # list of source files
-SOURCES  = main.c
+SOURCES  = main.c syscalls.cpp
 SOURCES += $(STD_PERIPH_LIBS)/Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.c
 SOURCES += $(STD_PERIPH_LIBS)/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c
 SOURCES += $(STD_PERIPH_LIBS)/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c
