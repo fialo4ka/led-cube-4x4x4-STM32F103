@@ -5,6 +5,6 @@
 #include <stm32f10x_gpio.h>
 #include <stm32f10x_rcc.h>
 
-#define DELAY 1500  // in millis
+#define DELAY 50  // in millis
 
 #endif

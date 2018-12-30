@@ -1,5 +1,5 @@
 # path to STM32F103 standard peripheral library
-STD_PERIPH_LIBS ?= /home/tuxcoder/programs/stm32f10x-stdperiph-lib
+STD_PERIPH_LIBS ?= $(HOME)/programs/stm32f10x-stdperiph-lib
 
 # list of source files
 SOURCES  = main.c syscalls.cpp
@@ -45,5 +45,6 @@ clean:
 	rm -f *.o *.elf *.hex *.bin
 
 # flash
-burn:
-	sudo $(ST_FLASH) write $(PROJECT).bin 0x8000000
+burn: led.bin
+#	sudo $(ST_FLASH) write $(PROJECT).bin 0x8000000
+	stm32flash -w led.bin  /dev/ttyUSB0
